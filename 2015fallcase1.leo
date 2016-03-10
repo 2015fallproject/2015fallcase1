@@ -20,7 +20,9 @@
 <v t="amd.20151027105036.1"><vh>研究目標</vh></v>
 </v>
 <v t="amd.20151027110237.1"><vh>帳號管理</vh></v>
-<v t="amd.20151027113749.1"><vh>開發日誌</vh></v>
+<v t="amd.20151027113749.1" a="E"><vh>開發日誌</vh>
+<v t="amd.20151027175824.1"><vh>影片串流</vh></v>
+</v>
 <v t="amd.20151027111641.1" a="E"><vh>設定檔案管理</vh>
 <v t="amd.20151027115040.1"><vh>@edit README.md</vh></v>
 <v t="amd.20151027111559.1"><vh>@edit .gitignore</vh></v>
@@ -297,42 +299,6 @@ def docheck():
  </t>
 <t tx="amd.20151027112118.1"></t>
 <t tx="amd.20151027112139.1"></t>
-<t tx="amd.20151027112139.2">@language html
-正確答案為: {{ answer }}
-&lt;br /&gt;
-次數: {{ count }}
-&lt;br /&gt;
-{# 一旦使用者送出表單, 就交由 /docheck 處理後續表單內容處理, 並且導向條件判斷迴圈, 並回覆結果 #}
-&lt;form method="POST" action="/docheck"&gt;
-請輸入您所猜的整數:&lt;input type="text" name="guess"&gt;&lt;br /&gt;
-&lt;input type="submit" value="send"&gt;
-&lt;/form&gt;</t>
-<t tx="amd.20151027112139.4">@language html
-{# 需要從 render_template 呼叫中取得 guess, count 與 answer 變數值 #}
-猜的數字為: {{ guess }}
-&lt;br /&gt;
-已經猜了幾次: {{ count }}
-&lt;br /&gt;
-正確答案: {{ answer }}
-&lt;br /&gt;
-&lt;form method="POST" action="/docheck"&gt;
-請輸入您所猜的整數:&lt;input type="text" name="guess"&gt;&lt;br /&gt;
-&lt;input type="submit" value="send"&gt;
-&lt;/form&gt;</t>
-<t tx="amd.20151027112139.5">@language html
-your guess is {{ guess }}
-&lt;br /&gt;
-&lt;a href="/guessform"&gt;guessform&lt;/a&gt;</t>
-<t tx="amd.20151027112139.6">@language html
-太大了, 再猜
-&lt;br /&gt;
-{# 必須要從 docheck render_template 中取得 guessfor.html 所需要的變數值 #}
-{% include 'guessform.html' %}</t>
-<t tx="amd.20151027112139.7">@language html
-太小了, 再猜
-&lt;br /&gt;
-{# 必須要從 docheck render_template 中取得 guessfor.html 所需要的變數值 #}
-{% include 'guessform.html' %}</t>
 <t tx="amd.20151027113023.1">近端:
 
 
@@ -352,5 +318,10 @@ your guess is {{ guess }}
 <t tx="amd.20151027113749.1">static/Brython3.2.2-20150927-180218 已經脫離中文字符修改一致性
 
 若要使用中文字符, 只能退到 static/Brython3.2.0-20150701-214155 版本</t>
+<t tx="amd.20151027175824.1">http://blog.miguelgrinberg.com/post/video-streaming-with-flask
+
+http://www.chioka.in/python-live-video-streaming-example/
+
+</t>
 </tnodes>
 </leo_file>
